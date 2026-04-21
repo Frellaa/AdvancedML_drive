@@ -1,0 +1,20 @@
+{
+  "data": {
+    "start_date": "2015-01-01",
+    "end_date": "2024-01-01",
+    "target_ticker": "NVDA",
+    "top_n_tickers": 20,
+    "sequence_length": 30
+  },
+  "model": {
+    "d_model": 128,
+    "nhead": 4,
+    "num_layers": 2,
+    "dropout": 0.2
+  },
+  "training": {
+    "batch_size": 64,
+    "epochs": 20,
+    "learning_rate": 0.0001
+  }
+}
