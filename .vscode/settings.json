@@ -1,0 +1,10 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/Advanced Machine Learning Project/.venv/bin/python",
+  "jupyter.kernels.excludePythonEnvironments": [],
+  "notebook.kernelProviderAssociations": [
+    {
+      "viewType": "jupyter-notebook",
+      "kernelProvider": "ms-python.python"
+    }
+  ]
+}

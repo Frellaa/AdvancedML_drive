@@ -1,0 +1,41 @@
+{
+  "data": {
+    "log_returns_path": "data/log_returns.csv",
+    "target_ticker": "NVDA",
+    "sequence_length": 30,
+    "forecast_horizon": 5,
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "regime_vol_window": 20
+  },
+  "model": {
+    "d_model": 128,
+    "d_latent": 64,
+    "nhead": 4,
+    "num_layers": 2,
+    "timegan_hidden": 64,
+    "dropout": 0.2
+  },
+  "training": {
+    "phase1_epochs": 50,
+    "phase2_epochs": 30,
+    "batch_size": 64,
+    "lr_phase1": 0.0001,
+    "lr_phase2": 0.001,
+    "lr_disc": 0.0001,
+    "loss": "pinball",
+    "freeze_encoder": true,
+    "early_stop_patience": 8,
+    "grad_clip": 1.0,
+    "loss_weights": {
+      "recon": 10.0,
+      "supervised": 5.0,
+      "adv": 1.0,
+      "cycle": 5.0,
+      "align": 1.0
+    }
+  },
+  "paths": {
+    "artifacts_dir": "artifacts_regi"
+  }
+}
